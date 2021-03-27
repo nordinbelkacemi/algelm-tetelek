@@ -5,6 +5,8 @@
 \usepackage[T1]{fontenc}
 
 \usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{enumitem}
 \usepackage[most]{tcolorbox}
 
 \tcbset{colback=green!5!white,colframe=green!75!black}
@@ -19,6 +21,15 @@
 
 
 \begin{document}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{Lépésszám becslések:}
+  \begin{enumerate}[label=(\roman*)]
+    \item $f(n) \in O(g(n))$ ha $\exists c > 0$ és $\exists n_{0} \in \mathbb{N}^{+}$: $f(n) \leq c \cdot g(n)$ ha $n \geq n_{0}$.
+    \item $f(n) \in \Omega(g(n))$ ha $\exists d > 0$ és $\exists n_{0} \in \mathbb{N}^{+}$: $f(n) \geq d \cdot g(n)$ ha $n \geq n_{0}$.
+    \item $f(n) \in \Theta(g(n))$ ha $f(n) \in O(g(n))$ és $f(n) \in \Omega(g(n))$.
+  \end{enumerate}
+\end{tcolorbox}
 
 \begin{tcolorbox}[size = fbox]
   \textbf{Det hiányos VA nyelve:} $L(M) = \{w \in \Sigma^{*}\ |\ w$-t el tudja olvasni és a végén $F$-beliben van$\}$.
