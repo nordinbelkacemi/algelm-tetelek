@@ -1,0 +1,93 @@
+\documentclass[a4paper]{article}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[magyar]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage{mathtools}
+\usepackage[most]{tcolorbox}
+
+\tcbset{colback=green!5!white,colframe=green!75!black}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{Det hiányos VA nyelve:} $L(M) = \{w \in \Sigma^{*}\ |\ w$-t el tudja olvasni és a végén $F$-beliben van$\}$.
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{Nemdet VA nyelve:} $L(M) = \{w \in \Sigma^{*}\ |\ $van $w$-hez olyan számítás, amin elolvas végig és elfogad$\}$.
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{Tetel:} Ha $L$-re van hiányos DVA, akkor van rá teljes DVA is.
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{Tetel:} Ha $L$-re van nemdet VA, akkor van teljes DVA is.
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{Reguláris nyelv:} L reguláris, ha van rá véges automata.
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{Tetel:} $a^{n}b^{n}$ alakú szavak nyelve nem reguláris, azaz nincs rá det, teljes VA.
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{CF nyelvtan által generált nyelv:} $L(G) = \{w \in \Sigma^{*}\ |\ S \Rightarrow ... \Rightarrow w$ (azaz van levezetés $w$-ig)$\}$.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback = yellow!20, colframe = yellow, size = fbox]
+Amikor azt állítjuk, hogy egy CF nyelvtan egy adott nyelvet generál, akkor meg kell mutatni, hogy \textbf{azt és csak azt} a nyelvet generálja. pl: \\
+\[
+  \begin{Bmatrix} 
+    L(G) \subseteq \{ \text{1. betű = utolsó} \} \text{ - (azaz csak ilyen szavakat tud generálni)} \\
+    L(G)\ \text{\reflectbox{$\subseteq$}}\ \{ \text{1. betű = utolsó} \} \text{ - (azaz minden ilyen szót generál)}
+  \end{Bmatrix}
+\]
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{CF nyelvtan által generált nyelv:} $L(G) = \{w \in \Sigma^{*}\ |\ S \Rightarrow ... \Rightarrow w$ (azaz van levezetés $w$-ig)$\}$.
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{Nemdet PDA nyelve:} $L(M) = \{w \in \Sigma^{*}\ |\ $van olyan futás, amire $w$-t elolvassa és elfogadó állapotba ér$\}$.
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{Nemdet PDA nyelve:} $L(M) = \{w \in \Sigma^{*}\ |\ $van olyan futás, amire $w$-t elolvassa és elfogadó állapotba ér$\}$.
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{Tetel:} $\{a^{n}b^{n}c^{n}\ |\ n \geq 1 \}$ alakú szavak nyelvére nincs PDA.
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{Tetel:} $L$-re van $G$ CF nyelvtan: $L(G) = L \Longleftrightarrow L$-re van $M$ nemdet PDA: $L(M) = L$
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{CF nyelv:} $L$ nyelv CF nyelv ha van rá $G$ CF nyelvtan: L(G) = L (= van rá $M$ nemdet PDA: L(M) = L).
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{Determinisztikus CF nyelv:} $L$ nyelv det CF nyelv ha van rá det PDA.
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{Tetel:} $L$-re van det PDA $\Rightarrow$ $L$-re van egyértelmű CF nyelvtan.
+\end{tcolorbox}
+
+\end{document}
