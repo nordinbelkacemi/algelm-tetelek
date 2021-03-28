@@ -9,8 +9,8 @@
 \usepackage{enumitem}
 \usepackage[most]{tcolorbox}
 
+\pagenumbering{gobble}
 \tcbset{colback=green!5!white,colframe=green!75!black}
-
 
 
 
@@ -29,6 +29,12 @@
     \item $f(n) \in \Omega(g(n))$ ha $\exists d > 0$ és $\exists n_{0} \in \mathbb{N}^{+}$: $f(n) \geq d \cdot g(n)$ ha $n \geq n_{0}$.
     \item $f(n) \in \Theta(g(n))$ ha $f(n) \in O(g(n))$ és $f(n) \in \Omega(g(n))$.
   \end{enumerate}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback = blue!5, colframe = blue, size = fbox]
+  \begin{center}
+    $1 \ll \log{n} \ll ... \ll \log^{100}{n} \ll n \ll n\log{n} \ll ... \ll n\log^{100}{n} \ll n^2 \ll 2^n \ll n! \ll n^n$
+  \end{center}
 \end{tcolorbox}
 
 \begin{tcolorbox}[size = fbox]
@@ -59,7 +65,7 @@
   \textbf{CF nyelvtan által generált nyelv:} $L(G) = \{w \in \Sigma^{*}\ |\ S \Rightarrow ... \Rightarrow w$ (azaz van levezetés $w$-ig)$\}$.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback = yellow!20, colframe = yellow, size = fbox]
+\begin{tcolorbox}[colback = blue!5, colframe = blue, size = fbox]
 Amikor azt állítjuk, hogy egy CF nyelvtan egy adott nyelvet generál, akkor meg kell mutatni, hogy \textbf{azt és csak azt} a nyelvet generálja. pl: \\
 \[
   \begin{Bmatrix} 
@@ -74,11 +80,7 @@ Amikor azt állítjuk, hogy egy CF nyelvtan egy adott nyelvet generál, akkor me
 \end{tcolorbox}
 
 \begin{tcolorbox}[size = fbox]
-  \textbf{Nemdet PDA nyelve:} $L(M) = \{w \in \Sigma^{*}\ |\ $van olyan futás, amire $w$-t elolvassa és elfogadó állapotba ér$\}$.
-\end{tcolorbox}
-
-\begin{tcolorbox}[size = fbox]
-  \textbf{Nemdet PDA nyelve:} $L(M) = \{w \in \Sigma^{*}\ |\ $van olyan futás, amire $w$-t elolvassa és elfogadó állapotba ér$\}$.
+  \textbf{Nemdet PDA nyelve:} $L(M) = \{w \in \Sigma^{*}\ |\ $van olyan futás, amire $w$-t elolvassa és elfogadó állapotba ér$\}$
 \end{tcolorbox}
 
 \begin{tcolorbox}[size = fbox]
@@ -99,6 +101,22 @@ Amikor azt állítjuk, hogy egy CF nyelvtan egy adott nyelvet generál, akkor me
 
 \begin{tcolorbox}[size = fbox]
   \textbf{Tetel:} $L$-re van det PDA $\Rightarrow$ $L$-re van egyértelmű CF nyelvtan.
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{Diagonális nyelv:} $L_d = \{ w \in \{0,1\}^*\ |\ \exists M_w $ ($w$ egy TG-et kódol) és $w \notin L(M_w)$ ($w$-t nem fogadja el a TG)$\}$ 
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{Állítás:} Nincs olyan $M$ TG amire $L(M) = L_d$
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{Megállási nyelv:} $L_h = \{ w\#s \ |\ w \in \{0,1\}^*, s \in \{0,1\}^*$ és $\exists M_w$ és $M_w$ leáll $s$-en$\}$ ($w\#s$ egy szópárt jelöl)
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{Állítás:} $L_h$-ra van TG de nincs \textbf{mindig leálló} TG.
 \end{tcolorbox}
 
 \end{document}
