@@ -123,5 +123,31 @@ Amikor azt állítjuk, hogy egy CF nyelvtan egy adott nyelvet generál, akkor me
   \textbf{Állítás:} $L_h$-ra van TG de nincs \textbf{mindig leálló} TG.
 \end{tcolorbox}
 
+\begin{tcolorbox}[size = fbox]
+  \textbf{Church-Turing tézis:} 
+  \begin{enumerate}[label=(\roman*)]
+    \item $L$ nyelvre van algoritmikus eljárás, ami éppen $L$ szavait fogadja el $\Longleftrightarrow$ $L$-re van $M$ TG: $L(M) = L$.
+    \item $L$ nyelvre van mindig leálló algoritmus, ami $L$ szavait fogadja el $\Longleftrightarrow$ $L$-re van mindig leálló $M$ TG: $L(M) = L$.
+  \end{enumerate}
+\end{tcolorbox}
 
+\begin{tcolorbox}[size = fbox]
+  \textbf{Tétel:} $L$-re van $M$ nemdet TG: $L(M): L \Longleftrightarrow$ $L$-re van $M'$ det TG: $L(M'): L$.
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{P:} Azon $L$ nylevek, amelyekre van $M$ polinom időkorlátos det TG: $L(M) = L$
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{NP:} Azon $L$ nylevek, amelyekre van $M$ polinom időkorlátos nemdet TG: $L(M) = L$
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{Tanú tétel:} $L \in $ NP akkor és csak akkor, ha $\exists c_1, c_2 > 0$ és $L_1$ szópárokból áll:
+  \begin{enumerate}[label=(\roman*)]
+    \item $L_1 \in $ P, azaz $(x, y)$ párról gyorsan eldönthető, hogy jó pár-e.
+    \item $x \in L \Longleftrightarrow \exists y: |y| \leq c_1 \cdot |x|^{c_2}$ és $(x, y) \in L_1$. 
+  \end{enumerate} 
+\end{tcolorbox}
 \end{document}
