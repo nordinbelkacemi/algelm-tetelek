@@ -144,10 +144,36 @@ Amikor azt állítjuk, hogy egy CF nyelvtan egy adott nyelvet generál, akkor me
 \end{tcolorbox}
 
 \begin{tcolorbox}[size = fbox]
+  \textbf{coNP:} Azon $L$ nylevek, amelyeknek a komplementere NP-beli.
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
   \textbf{Tanú tétel:} $L \in $ NP akkor és csak akkor, ha $\exists c_1, c_2 > 0$ és $L_1$ szópárokból áll:
   \begin{enumerate}[label=(\roman*)]
     \item $L_1 \in $ P, azaz $(x, y)$ párról gyorsan eldönthető, hogy jó pár-e.
     \item $x \in L \Longleftrightarrow \exists y: |y| \leq c_1 \cdot |x|^{c_2}$ és $(x, y) \in L_1$. 
-  \end{enumerate} 
+  \end{enumerate}
 \end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{Tétel:} P $\subseteq$ coNP
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{Karp redukálhatóság:} $L_1$ és $L_2$ két $\{0,1\}^*$-beli nyelv. $L_1 \prec L_2$ : $L_1$ Karp-redukálható $L_2$-re, ha $\exists f: \{0,1\}^* \rightarrow \{0,1\}^*$ és
+  \begin{enumerate}[label=(\roman*)]
+    \item $f$ minden $\{0,1\}^*$-beli szón értelmezett
+    \item $f(x)$ gyorsan számolható: O$(|x|^{c_1})$ időben
+    \item $x \in L_1 \Longleftrightarrow f(x) \in L_2$.
+  \end{enumerate}
+\end{tcolorbox}
+
+\begin{tcolorbox}[size = fbox]
+  \textbf{NP teljes:} $Y$ probléma NP-teljes, ha:
+  \begin{enumerate}[label=(\roman*)]
+    \item $Y \in $ NP
+    \item $\forall X \in$ NP : $X \prec Y$
+  \end{enumerate}
+\end{tcolorbox}
+
 \end{document}
